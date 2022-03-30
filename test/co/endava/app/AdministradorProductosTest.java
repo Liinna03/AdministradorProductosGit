@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AdministradorProductosTest {
 
     @Test
-    void testMain() {
+    void testComidaSinVencer() {
         int descuento;
         descuento = 0;
         Comida sin_vencer = new Comida(103, "atun", 3000, LocalDate.now().minusDays(2));
@@ -19,7 +19,7 @@ class AdministradorProductosTest {
         System.out.println(sin_vencer.getDescuento());
     }
     @Test
-    void testMain01() {
+    void testVenceFechaActual() {
         int descuento;
         descuento = (800*10)/100;
         Comida vence_hoy = new Comida(451, "jamón", 800, LocalDate.now());
@@ -27,7 +27,7 @@ class AdministradorProductosTest {
         System.out.println(vence_hoy.getDescuento());
     }
     @Test
-    void testMain03() {
+    void testVencida(){
         int descuento;
         descuento = (1500*10)/100;
         Comida vencida = new Comida(451, "leche", 1500, LocalDate.now().plusDays(5));
